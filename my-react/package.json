@@ -14,8 +14,9 @@
   },
   "dependencies": {
     "firebase": "^9.9.2",
-    "heroku": "^7.62.0",
+    "heroku": "^7.3.0",
     "isomorphic-fetch": "^3.0.0",
+    "mongoose": "^6.5.0",
     "next": "^12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
