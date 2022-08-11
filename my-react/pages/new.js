@@ -19,12 +19,14 @@ const NewNote = () => {
                 setIsSubmitting(false);
             }
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [errors])
 
     const createNote = async () => {
         try {
             const res = await fetch('http://localhost:3000/api/notes', {
                 method: 'POST',
+                mode:'no-cors',
                 headers: {
                     "Accept": "application/json",
                     "Content-Type": "application/json"

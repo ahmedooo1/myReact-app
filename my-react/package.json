@@ -13,6 +13,8 @@
     "heruko-postbuild": "npm run build"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "eslint-plugin-react-hooks": "^4.7.0-next-17e2a15be-20220808",
     "firebase": "^9.9.2",
     "heroku": "^7.3.0",
     "isomorphic-fetch": "^3.0.0",

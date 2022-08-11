@@ -19,12 +19,14 @@ const EditNote = ({ note }) => {
                 setIsSubmitting(false);
             }
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [errors])
 
     const updateNote = async () => {
         try {
             const res = await fetch(`http://localhost:3000/api/notes/${router.query.id}`, {
                 method: 'PUT',
+
                 headers: {
                     "Accept": "application/json",
                     "Content-Type": "application/json"
@@ -107,7 +109,7 @@ const EditNote = ({ note }) => {
 }
 
 EditNote.getInitialProps = async ({ query: { id } }) => {
-    const res = await fetch(`http://localhost:3000/api/notes/${id}`);
+    const res = await fetch(`http://localhost:3000/api/notes/${id}`,{mode: 'no-cors'});
     const { data } = await res.json();
 
     return { note: data }
